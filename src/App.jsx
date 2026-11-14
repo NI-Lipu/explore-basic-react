@@ -1,32 +1,23 @@
-import Actor from "./Actor";
 import "./App.css";
-import Singer from "./Singer";
-import Too from "./Todo";
 
 function App() {
-  const actors=["saruk", "salman", "amir"];
-  const singers=[
-    {id:1, name:"bappa"},
-    {id:2, name:"tahsan"},
-    {id:3, name:"balam"}
-  ]
+  function handleClick() {
+    alert("I am clicked.");
+  }
+
+  const addHandler=(num)=>{
+    alert(num+5);
+  }
   return (
     <>
-      <section id="center">
-        <div>
-          <h1>Get started</h1>
-          {/* <Too task='Assignment' isDone={false}></Too> */}
-          {
-            actors.map(actor=><Actor actor={actor}></Actor>)
-          }
-          {
-            singers.map(singer=><Singer key={singer.id} singer={singer}></Singer>)
-          }
-        </div>
-      </section>
+      <div id="center">
+        <h1>Get started</h1>
+        <button onClick={handleClick}>Click</button>
+        <button onClick={() => alert("click-2")}>Click2</button>
+        <button onClick={()=>addHandler(10)}>Add 10</button>
+      </div>
     </>
   );
 }
-
 
 export default App;
