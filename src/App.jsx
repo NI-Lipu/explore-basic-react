@@ -1,4 +1,5 @@
 import "./App.css";
+import UseState from "./UseState";
 
 function App() {
   function handleClick() {
@@ -15,6 +16,8 @@ function App() {
         <button onClick={handleClick}>Click</button>
         <button onClick={() => alert("click-2")}>Click2</button>
         <button onClick={()=>addHandler(10)}>Add 10</button>
+
+        <UseState></UseState>
       </div>
     </>
   );
